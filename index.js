@@ -219,7 +219,6 @@ app.get("/strings/filter-by-natural-language", (req, res) => {
 
 // GET /strings/:string_value - Get Specific String
 app.get("/strings/:string_value", (req, res) => {
-  const { string_value } = req.params;
   const hash = computeSHA256(string_value);
 
   const stringData = strings.get(hash);
